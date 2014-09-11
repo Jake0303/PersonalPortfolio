@@ -456,7 +456,10 @@
 						-o-transition: top .2s ease-in-out;
 						-ms-transition: top .2s ease-in-out;
 						transition: top .2s ease-in-out;
+                        margin-right:20px;
 					}
+
+                        
 
 					ul.social li a:before {
 						background-color: #444;
