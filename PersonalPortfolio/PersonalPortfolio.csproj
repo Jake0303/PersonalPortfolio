@@ -92,6 +92,7 @@
     <Content Include="images\pic06.jpg" />
     <Content Include="index.html" />
     <Content Include="js\init.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.scrolly.min.js" />
     <Content Include="js\skel.min.js" />
