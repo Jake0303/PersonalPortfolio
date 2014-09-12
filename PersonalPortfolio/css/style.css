@@ -19,6 +19,7 @@ body, input, textarea, select {
     font-weight: 300;
 }
 
+#bio{width:65%;}
     body.is-loading * {
         -moz-transition: none !important;
         -webkit-transition: none !important;

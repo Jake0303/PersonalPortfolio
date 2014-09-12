@@ -61,6 +61,12 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="js\jssor.player.ytiframe.compress.bat" />
+    <Content Include="js\jssor.slider.debug.min.compress.bat" />
+    <Content Include="js\jssor.slider.min.compress.bat" />
+    <Content Include="js\jssor.slider.mini.compress.bat" />
+    <Content Include="js\jssor.sliderc.mini.compress.bat" />
+    <Content Include="js\jssor.sliders.mini.compress.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -82,6 +88,7 @@
     <Content Include="css\style-mobile.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="full-width-slider.source.html" />
     <Content Include="images\2c229ec.jpg" />
     <Content Include="images\logo.PNG" />
     <Content Include="images\pic00.jpg" />
@@ -93,9 +100,20 @@
     <Content Include="images\pic06.jpg" />
     <Content Include="index.html" />
     <Content Include="js\init.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.scrolly.min.js" />
+    <Content Include="js\jssor.core.js" />
+    <Content Include="js\jssor.player.ytiframe.js" />
+    <Content Include="js\jssor.player.ytiframe.min.js" />
+    <Content Include="js\jssor.slider.debug.min.js" />
+    <Content Include="js\jssor.slider.js" />
+    <Content Include="js\jssor.slider.min.js" />
+    <Content Include="js\jssor.slider.mini.js" />
+    <Content Include="js\jssor.sliderc.mini.js" />
+    <Content Include="js\jssor.sliders.mini.js" />
+    <Content Include="js\jssor.utils.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="LICENSE.txt" />
     <Content Include="README.txt" />
