@@ -6,20 +6,13 @@
 -->
 <html>
 <head>
-    <title>Miniport by HTML5 UP</title>
+    <title>Jacob Amaral</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>""
     <script src="js/init.js"></script>
-    <!--JSSOR Slider - Edited by Jacob Amaral-->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <!-- use jssor.slider.mini.js (40KB) or jssor.sliderc.mini.js (32KB, with caption, no slideshow) or jssor.sliders.mini.js (28KB, no caption, no slideshow) instead for release -->
-    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
     <script type="text/javascript" src="js/jssor.core.js"></script>
     <script type="text/javascript" src="js/jssor.utils.js"></script>
     <script type="text/javascript" src="js/jssor.slider.js"></script>
@@ -28,12 +21,10 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style-desktop.css" />
     </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-</head>
+  </head>
 <body>
 
-    <!-- Nav -->
+    <!--Nav Bar-->
     <nav id="nav">
         <ul class="container">
             <li><a href="#top">Top</a></li>
@@ -43,7 +34,7 @@
         </ul>
     </nav>
 
-    <!-- Home -->
+    <!--Home-->
     <div class="wrapper style1 first">
         <article class="container" id="top">
             <div class="row">
@@ -76,6 +67,7 @@
                         <img id="profilepic" src="images/2c229ec.jpg" width="383" height="384" />
 
                     </div>
+                    <!--Bio-->
                     <div class="4u" id="bio">
                         <section class="box style1">
                             <h3>My life.</h3>
@@ -91,172 +83,90 @@
                   </div>
             </div>
             <footer>
-                <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
                 <a href="#portfolio" class="button big scrolly">See some of my recent work</a>
             </footer>
         </article>
     </div>
 
-    <!-- Portfolio -->
+    <!--Portfolio-->
     <div class="wrapper style3">
         <article id="portfolio">
             <header>
                 <h2>Here’s some stuff I made recently.</h2>
             </header>
             <div class="container">
-                <script>
-                    jQuery(document).ready(function ($) {
+                <!--Jssor Slider Begin-->
+                <div id="slider1_container" u="slider1_container">
 
-                        var _CaptionTransitions = [];
-                        _CaptionTransitions["L"] = { $Duration: 900, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
-                        _CaptionTransitions["R"] = { $Duration: 900, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
-                        _CaptionTransitions["T"] = { $Duration: 900, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
-                        _CaptionTransitions["B"] = { $Duration: 900, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
-                        _CaptionTransitions["ZMF|10"] = { $Duration: 900, $Zoom: 11, $Easing: { $Zoom: $JssorEasing$.$EaseOutQuad, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 };
-                        _CaptionTransitions["RTT|10"] = { $Duration: 900, $Zoom: 11, $Rotate: 1, $Easing: { $Zoom: $JssorEasing$.$EaseOutQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInExpo }, $Opacity: 2, $Round: { $Rotate: 0.8 } };
-                        _CaptionTransitions["RTT|2"] = { $Duration: 900, $Zoom: 3, $Rotate: 1, $Easing: { $Zoom: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Round: { $Rotate: 0.5 } };
-                        _CaptionTransitions["RTTL|BR"] = { $Duration: 900, x: -0.6, y: -0.6, $Zoom: 11, $Rotate: 1, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Zoom: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } };
-                        _CaptionTransitions["CLIP|LR"] = { $Duration: 900, $Clip: 15, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic }, $Opacity: 2 };
-                        _CaptionTransitions["MCLIP|L"] = { $Duration: 900, $Clip: 1, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic } };
-                        _CaptionTransitions["MCLIP|R"] = { $Duration: 900, $Clip: 2, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic } };
-
-                        var options = {
-                            $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
-                            $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                            $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                            $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
-
-                            $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                            $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-                            $SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                            $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                            //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                            //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                            $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-                            $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                            $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                            $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                            $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-                            $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
-                            $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
-                                $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
-                                $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
-                                $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
-                                $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
-                            },
-
-                            $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
-                                $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
-                                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                                $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                                $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                                $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                                $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                                $SpacingY: 8,                                   //[Optional] Vertical space between each item in pixel, default value is 0
-                                $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                            },
-
-                            $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
-                                $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
-                                $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                                $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                                $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                            }
-                        };
-
-                        var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-
-                        //responsive code begin
-                        //you can remove responsive code if you don't want the slider scales while window resizes
-                        function ScaleSlider() {
-                            var bodyWidth = document.body.clientWidth;
-                            if (bodyWidth)
-                                jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 1920));
-                            else
-                                window.setTimeout(ScaleSlider, 30);
-                        }
-
-                        ScaleSlider();
-
-                        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                            $(window).bind('resize', ScaleSlider);
-                        }
-
-
-                        //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-                        //    $(window).bind("orientationchange", ScaleSlider);
-                        //}
-                        //responsive code end
-                    });
-                </script>
-                <!-- Jssor Slider Begin -->
-                <!-- You can move inline styles to css file or css block. -->
-                <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
                     <!-- Loading Screen -->
                     <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
+                        <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
                         </div>
                         <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
+                top:inherit; left:inherit;width: 100%;height:100%;">
                         </div>
                     </div>
+
+                    <!-- Slides Container -->
+                    <div id="slides" u="slides">
+                        <div>
+                            <a href="http://hub.jmonkeyengine.org/forum/topic/my-first-game-landofamaral3d/"><img u="image" src="images/landofamaral3d.png" /></a>
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/03.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/04.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/05.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/06.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/07.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/08.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/09.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/10.jpg" />
+                        </div>
+                        <div>
+                            <img u="image" src="images/landscape/11.jpg" />
+                        </div>
+                    </div>
+
+
+                    <!-- bullet navigator container -->
+                    <div id="slidenavigator" u="navigator" class="jssorb05">
+                        <!-- bullet navigator item prototype -->
+                        <div id="prototype" u="prototype"></div>
+                    </div>
+                    <!-- Bullet Navigator Skin End -->
+                    <!-- Arrow Navigator Skin Begin -->
+                    <!-- Arrow Left -->
+                    <span id="arrowleft" class="jssora12l" u="arrowleft">
+                    </span>
+                    <!-- Arrow Right -->
+                    <span id="arrowright" class="jssora12r" u="arrowright">
+                    </span>
+                    <!-- Arrow Navigator Skin End -->
                 </div>
-                <!-- Slides Container -->
-                <div u="slides" style="cursor: move; width: 1300px;
-            height: 500px; overflow: hidden;">
-                    <div>
-                        <img u="image" src="images/red.jpg" />
-                        <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="width: 445px; height: 300px;">
-                        </div>
-                        <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                            </div>
-                        <div style="position: absolute; width: 480px; height: 120px;padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                        color: #FFFFFF;">
-                            Touch Swipe Slider
-                        </div>
-                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                        color: #FFFFFF;">
-                            Build your slider with anything, includes image, content, text, html, photo, picture
-                        </div>
-                    </div>
-                    <div>
-                        <img u="image" src="images/purple.jpg" />
-                        <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                        color: #FFFFFF;">
-                            Touch Swipe Slider
-                        </div>
-                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                        color: #FFFFFF;">
-                            Build your slider with anything, includes image, content, text, html, photo, picture
-                        </div>
-                    </div>
-                    <div>
-                        <img u="image" src="images/blue.jpg" />
-                        <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                        color: #FFFFFF;">
-                            Touch Swipe Slider
-                        </div>
-                        <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                        color: #FFFFFF;">
-                            Build your slider with anything, includes image, content, text, html, photo, picture
-                        </div>
-                        <footer>
-                            <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+                <!-- Jssor Slider End -->
+                       <!--Footer--> 
+                       <footer>
                             <a href="#contact" class="button big scrolly">Get in touch with me</a>
                         </footer>
 </article>
     </div>
 
-    <!-- Contact -->
+    <!--Contact-->
     <div class="wrapper style4">
         <article id="contact" class="container small">
             <header>
@@ -314,6 +224,7 @@
                 </div>
             </div>
             <footer>
+                <!--Copyright-->
                 <ul id="copyright">
                     <li>&copy; Jake Entertainment. All rights reserved.</li>
                 </ul>
