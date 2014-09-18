@@ -86,14 +86,14 @@
                 </div>
             </div>
             <footer>
-                <a href="#portfolio" class="button big scrolly">My Services</a>
+                <a href="#services" class="button big scrolly">My Services</a>
             </footer>
         </article>
     </div>
 
     <!--Services Section-->
     <div class="wrapper style2">
-        <article id="work">
+        <article id="services">
             <header>
                 <h2>My Services</h2>
                 <p>Learn about my skills of the trade</p>
@@ -105,20 +105,21 @@
                         <img id="profilepic" src="images/QWERTY_keyboard.jpg" width="383" height="384" />
                     </div>
                     <!--About my services-->
-                    <div class="4u" id="bio">
+                    <div class="4u" id="myservices">
                         <section class="box style1">
                             <h3>What I do</h3>
-                            <p>
+                            <p id="headparagraph">
                                 Providing solutions to clients is a task I do daily. I have a wide array of services I can provide:
-                                <ul>Provide tutorials for Unreal Engine, including install,C++ and Blueprints and the level editor</ul>
-                                <ul>Review and revise code for cleaner, more efficient implementation.</ul>
-                                <ul>Provide tutorials for jMonkey Engine with advanced knowledge of Java.</ul>
-                                <ul>Can build an a appealing website as well as teach and if necessary web hosting.</ul>
-                                <ul>Teach proper coding practices for real world applications.</ul>
-                                <ul>Consult with team members within your organization for a better work enviroment.</ul>
-                                <ul>Explain how to dynamically build web pages and display information from  a database.</ul>
                             </p>
-                        </section>
+                            <br />
+                                <ul>-Provide tutorials for Unreal Engine, including install,C++ and Blueprints and the level editor</ul>
+                                <ul>-Review and revise code for cleaner, more efficient implementation.</ul>
+                                <ul>-Provide tutorials for jMonkey Engine with advanced knowledge of Java.</ul>
+                                <ul>-Can build an a appealing website as well as teach and if necessary web hosting.</ul>
+                                <ul>-Teach proper coding practices for real world applications.</ul>
+                                <ul>-Consult with team members within your organization for a better work enviroment.</ul>
+                                <ul>-Explain how to dynamically build web pages and display information from  a database.</ul>
+                         </section>
                     </div>
                 </div>
             </div>
@@ -139,12 +140,10 @@
                 <div id="slider1_container" u="slider1_container">
 
                     <!-- Loading Screen -->
-                    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                        <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                    <div u="loading" id="loading">
+                        <div id="loadingbox">
                         </div>
-                        <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
-                top:inherit; left:inherit;width: 100%;height:100%;">
+                        <div id="loadingimage">
                         </div>
                     </div>
 
@@ -188,13 +187,12 @@
     <div class="wrapper style4">
         <article id="contact" class="container small">
             <header>
-                <h2>Have me make stuff for you.</h2>
-                <p>Ornare nulla proin odio consequat sapien vestibulum ipsum sed lorem.</p>
+                <h2>Lets talk!</h2>
             </header>
             <div>
                 <div class="row">
                     <div class="12u">
-                        <form method="post" action="#">
+                        <form method="post" action="contact.php">
                             <div>
                                 <div class="row">
                                     <div class="6u">
