@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\default.css" />
+    <Content Include="css\fancybox.css" />
     <Content Include="css\images\a12.png" />
     <Content Include="css\images\b05.png" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -207,6 +209,7 @@
     <Content Include="images\back.jpg" />
     <Content Include="images\browser-icons.png" />
     <Content Include="images\close.png" />
+    <Content Include="images\free-vector-left-arrow-green-clip-art_116716_Left_Arrow_Green_clip_art_medium.png" />
     <Content Include="images\home\01.jpg" />
     <Content Include="images\home\02.jpg" />
     <Content Include="images\home\03.jpg" />
@@ -363,6 +366,7 @@
     <Content Include="images\qr\full-width-slider.png" />
     <Content Include="images\qr\jssor.com.png" />
     <Content Include="images\QWERTY_keyboard.jpg" />
+    <Content Include="images\right-arrow.png" />
     <Content Include="images\share\share-icons.png" />
     <Content Include="images\t01.png" />
     <Content Include="images\travel\01.jpg" />
@@ -405,6 +409,7 @@
     <Content Include="images\travel\thumb-19.jpg" />
     <Content Include="images\unrealgame.png" />
     <Content Include="index.html" />
+    <Content Include="js\fancybox.js" />
     <Content Include="js\init.js" />
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\jquery-2.1.1.min.js" />

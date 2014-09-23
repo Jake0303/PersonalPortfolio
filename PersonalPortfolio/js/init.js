@@ -1,85 +1,88 @@
 /*
 	Template by HTML5 UP edited by Jacob Amaral
 */
-$("#topbutton").click(function() {
-    alert( "Handler for .click() called." );
-});
 /*Initialize slider*/
 
-        jQuery(document).ready(function ($) {
+// Only run everything once the page has completely loaded
+$(window).load(function () {
 
-            var _SlideshowTransitions = [
-            //Fade
-            { $Duration: 1200, $Opacity: 2 }
-            ];
+    // Fancybox specific
+    $(".gallery__link").fancybox({
+        'titleShow': false,
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic'
+    });
 
-            var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+    // Set general variables
+    // ====================================================================
+    var totalWidth = 0;
 
-                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+    // Total width is calculated by looping through each gallery item and
+    // adding up each width and storing that in `totalWidth`
+    $(".gallery__item").each(function () {
+        totalWidth = totalWidth + $(this).outerWidth(true);
+    });
 
-                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
-                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
-                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
-                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
-                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
-                },
+    // The maxScrollPosition is the furthest point the items should
+    // ever scroll to. We always want the viewport to be full of images.
+    var maxScrollPosition = totalWidth - $(".gallery-wrap").outerWidth();
 
-                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                    $SpacingY: 10,                                   //[Optional] Vertical space between each item in pixel, default value is 0
-                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                },
+    // This is the core function that animates to the target item
+    // ====================================================================
+    function toGalleryItem($targetItem) {
+        // Make sure the target item exists, otherwise do nothing
+        if ($targetItem.length) {
 
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
+            // The new position is just to the left of the targetItem
+            var newPosition = $targetItem.position().left;
+
+            // If the new position isn't greater than the maximum width
+            if (newPosition <= maxScrollPosition) {
+
+                // Add active class to the target item
+                $targetItem.addClass("gallery__item--active");
+
+                // Remove the Active class from all other items
+                $targetItem.siblings().removeClass("gallery__item--active");
+
+                // Animate .gallery element to the correct left position.
+                $(".gallery").animate({
+                    left: -newPosition
+                });
+            } else {
+                // Animate .gallery element to the correct left position.
+                $(".gallery").animate({
+                    left: -maxScrollPosition
+                });
             };
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        };
+    };
 
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
-                if (parentWidth)
-                    jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 600));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
+    // Basic HTML manipulation
+    // ====================================================================
+    // Set the gallery width to the totalWidth. This allows all items to
+    // be on one line.
+    $(".gallery").width(totalWidth);
 
-            ScaleSlider();
+    // Add active class to the first gallery item
+    $(".gallery__item:first").addClass("gallery__item--active");
 
-            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                $(window).bind('resize', ScaleSlider);
-            }
+    // When the prev button is clicked
+    // ====================================================================
+    $(".gallery__controls-prev").click(function () {
+        // Set target item to the item before the active item
+        var $targetItem = $(".gallery__item--active").prev();
+        toGalleryItem($targetItem);
+    });
 
-
-            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-            //    $(window).bind("orientationchange", ScaleSlider);
-            //}
-            //responsive code end
-        });
-
+    // When the next button is clicked
+    // ====================================================================
+    $(".gallery__controls-next").click(function () {
+        // Set target item to the item after the active item
+        var $targetItem = $(".gallery__item--active").next();
+        toGalleryItem($targetItem);
+    });
+});
 
 (function ($) {
 
@@ -90,7 +93,6 @@ $("#topbutton").click(function() {
             'desktop': { range: '641-', href: 'css/style-desktop.css', containers: 1200, grid: { gutters: 25 } },
         }
     });
-
     $(function () {
 
         var $window = $(window),
@@ -127,5 +129,5 @@ $("#topbutton").click(function() {
         });
 
     });
-
 })(jQuery);
+

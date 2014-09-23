@@ -8,15 +8,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/iconlogo.ico">
     <title>Jacob Amaral</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <link href="css/default.css" rel="stylesheet" />
     <!--Include our javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/skel.min.js"></script>
-    <script src="js/init.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jssor.core.js"></script>
-    <script type="text/javascript" src="js/jssor.utils.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script src="js/init.js"></script>
     <noscript>
         <!--CSS Files-->
         <link rel="stylesheet" href="css/skel.css" />
@@ -47,7 +46,7 @@
                 </div>
                 <div class="8u">
                     <header>
-                    <!--Welcome Message-->
+                        <!--Welcome Message-->
                         <h1><strong>Bringing games to life.</strong></h1>
                     </header>
                     <!--Slogan-->
@@ -134,57 +133,55 @@
     </div>
 
     <!--Portfolio-->
-    <div class="wrapper style3" >
+    <div class="wrapper style3">
         <article id="portfolio">
             <header>
                 <h2>Here’s some stuff I made recently.</h2>
             </header>
             <div class="container">
-                <!--Jssor Slider Begin-->
-                <div id="slider1_container" u="slider1_container">
+                <!--Slider Begin-->
+                <div class="gallery-wrap">
 
-                    <!-- Loading Screen -->
-                    <div u="loading" id="loading">
-                        <div id="loadingbox">
+                    <div class="gallery clearfix">
+                        <ul class="gallery__list">
+                            <li class="gallery__item">
+                                <a href="images/unrealgame.png" class="gallery__link">
+                                    <img src="images/unrealgame.png" class="gallery__img" alt="" />
+                                    <p id="caption">Currently developing a side scroller in Unreal Engine, stay tuned!</p>
+
+                                </a></li>
+                            <li class="gallery__item">
+                                <a href="http://hub.jmonkeyengine.org/forum/topic/my-first-game-landofamaral3d/" class="gallery__link">
+                                    <img src="images/landofamaral3d.png" class="gallery__img" alt="" />
+                                    <p id="caption">LandOfAmaral3D using the jMonkey Engine, click to find out more!</p>
+                                </a>
+                            </li>
+                            <li class="gallery__item">
+                                <a href="https://github.com/michael-morgan/LandOfAmaral" class="gallery__link">
+                                    <img src="images/2dgame.png" class="gallery__img" alt="" />
+                                    <p id="caption">LandOfAmaral2D - Collaborated with Michael Morgan.</p>
+
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="gallery__controls clearfix">
+                        <div href="#" class="gallery__controls-prev">
+                            <img src="images/free-vector-left-arrow-green-clip-art_116716_Left_Arrow_Green_clip_art_medium.png" />
                         </div>
-                        <div id="loadingimage">
+                        <div href="#" class="gallery__controls-next">
+                            <img src="images/right-arrow.png" />
                         </div>
                     </div>
-
-                    <!-- Slides Container -->
-                    <div id="slides" u="slides">
-                        <div>
-                            <!--Slider Images and caption-->
-                            <a href="http://hub.jmonkeyengine.org/forum/topic/my-first-game-landofamaral3d/" target="_blank">
-                                <p id="caption">Land of Amaral 3D using the jMonkey engine. Click for more info</p>
-                                <img u="image" src="images/landofamaral3d.png" />
-                            </a>
-                        </div>
-                        <div>
-                            <p id="caption">Currently making a side scroller in Unreal Engine, stay tuned for future updates!</p>
-                            <img u="image" src="images/unrealgame.png" />
-                        </div>
-                        <div>
-                            <a href="https://github.com/michael-morgan/LandOfAmaral" target="">
-                                <p id="caption">My first ever game, 2D hack n slash. Collaborated with Michael Morgan.</p>
-                                <img u="image" src="images/2dgame.png" />
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Arrow Left -->
-                    <span id="arrowleft" class="jssora12l" u="arrowleft">
-                    </span>
-                    <!-- Arrow Right -->
-                    <span id="arrowright" class="jssora12r" u="arrowright">
-                    </span>
-                    <!-- Arrow Navigator Skin End -->
                 </div>
-                <!-- Jssor Slider End -->
-                <!--Footer-->
-                <footer>
-                    <!--Button to contact form-->
-                    <a href="#contact" class="button big scrolly">Get in touch with me</a>
-                </footer>
+               
+                
+            <!--Footer-->
+            <footer>
+                <!--Button to contact form-->
+                <a href="#contact" class="button big scrolly">Get in touch with me</a>
+            </footer>
         </article>
     </div>
 
@@ -254,5 +251,10 @@
             </footer>
         </article>
     </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src='../../js/libs/jquery-1.6.3.min.js'>\x3C/script>")</script>
+    <script src="init.js"></script>
+    <script src="js/fancybox.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/fancybox.css" media="screen" />
 </body>
 </html>
