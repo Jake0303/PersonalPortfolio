@@ -88,12 +88,14 @@
     <Content Include="images\free-vector-left-arrow-green-clip-art_116716_Left_Arrow_Green_clip_art_medium.png" />
     <Content Include="images\iconlogo.ico" />
     <Content Include="images\landofamaral3d.png" />
+    <Content Include="images\leftarrow.gif" />
     <Content Include="images\loading.gif" />
     <Content Include="images\loading2.gif" />
     <Content Include="images\logo.PNG" />
     <Content Include="images\play.png" />
     <Content Include="images\QWERTY_keyboard.jpg" />
     <Content Include="images\right-arrow.png" />
+    <Content Include="images\rightarrow.gif" />
     <Content Include="images\t01.png" />
     <Content Include="images\unrealgame.png" />
     <Content Include="index.html" />
