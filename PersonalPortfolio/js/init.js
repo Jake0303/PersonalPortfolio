@@ -1,5 +1,8 @@
 /*
-	Template by HTML5 UP edited by Jacob Amaral
+	HTML5 UP edited by Jacob Amaral
+*/
+/*
+    Initiate CSS files depending on the screen size.
 */
 (function ($) {
 
@@ -48,7 +51,7 @@
     });
 })(jQuery);
 
-/*Initialize slider*/
+/*Initialize slider edited from CSS-Plus*/
 
 // Only run everything once the page has completely loaded
 

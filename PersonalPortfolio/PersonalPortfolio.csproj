@@ -101,12 +101,8 @@
     <Content Include="index.html" />
     <Content Include="js\fancybox.js" />
     <Content Include="js\init.js" />
-    <Content Include="js\jquery-1.9.1.min.js" />
-    <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="js\jquery.min.js" />
-    <Content Include="js\jssor.core.js" />
-    <Content Include="js\jssor.slider.js" />
-    <Content Include="js\jssor.utils.js" />
+    <Content Include="js\jquery.scrolly.min.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="privacypolicy.html" />
     <Content Include="termsofuse.html" />
